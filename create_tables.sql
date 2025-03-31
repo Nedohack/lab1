@@ -50,8 +50,8 @@ CREATE TABLE dw.dim_track (
     track_id INT PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
     album_id INT REFERENCES dw.dim_album(album_id),
-    genre_id INT, -- Буде посилатися на dim_genre
-    media_type_id INT, -- Буде посилатися на dim_media_type
+    genre_id INT,
+    media_type_id INT,
     composer VARCHAR(200),
     milliseconds INT,
     unit_price DECIMAL(10, 2)
